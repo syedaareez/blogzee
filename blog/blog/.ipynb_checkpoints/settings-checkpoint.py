@@ -138,10 +138,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/assets/'
-STATICFILES_DIRS=[Frontend_static,]
+# STATIC_URL = '/assets/'
+# STATICFILES_DIRS=[Frontend_static,]
+
+
 
 # Heroku 6
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #end
 
